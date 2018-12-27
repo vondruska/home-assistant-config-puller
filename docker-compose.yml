@@ -7,10 +7,12 @@ services:
       SCRIPT_EXECUTION_TIMEOUT: 10000
       STARTUP_SCRIPT: "/scripts/startup.sh"
       WEBHOOK_SCRIPT: "/scripts/hook.sh"
-      GIT_PASSWORD:
+      GIT_PASSWORD: "test"
+      GIT_USERNAME: "vondruska"
+      GIT_HOST: "gitlab.com"
     ports:
       - "9080:9080"
     volumes:
       - ./scripts:/scripts
-      - /opt/homeassistant:/homeassistant
+      - ./:/homeassistant
     user: "111:1001"
