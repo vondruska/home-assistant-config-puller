@@ -1,0 +1,15 @@
+version: "3"
+services:
+  webhook-pull:
+    image: vondruska/webhook-script-runner
+    environment:
+      TOKEN: "helloworld"
+      SCRIPT_EXECUTION_TIMEOUT: 10000
+      STARTUP_SCRIPT: "/scripts/startup.sh"
+      WEBHOOK_SCRIPT: "/scripts/hook.sh"
+      GIT_PASSWORD:
+    ports:
+      - "9080"
+    volumes:
+      - ./scripts:/scripts
+      - /opt/homeassistant:/homeassistant
