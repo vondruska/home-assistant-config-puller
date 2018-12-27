@@ -9,7 +9,7 @@ services:
       WEBHOOK_SCRIPT: "/scripts/hook.sh"
       GIT_PASSWORD:
     ports:
-      - "9080"
+      - "9080:9080"
     volumes:
       - ./scripts:/scripts
       - /opt/homeassistant:/homeassistant
