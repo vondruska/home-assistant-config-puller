@@ -1,2 +1,2 @@
 #!/bin/sh
-git -C /homeassistant-config pull
+git -C /homeassistant pull
