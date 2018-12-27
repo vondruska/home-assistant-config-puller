@@ -13,3 +13,4 @@ services:
     volumes:
       - ./scripts:/scripts
       - /opt/homeassistant:/homeassistant
+    user: "111:1001"
