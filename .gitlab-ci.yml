@@ -9,6 +9,7 @@ test-scripts:
 test-docker-compose:
   stage: test
   image: docker/compose:1.23.0
+  entrypoint: [""]
   
   script:
     - docker-compose config
