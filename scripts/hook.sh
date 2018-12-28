@@ -1,2 +1,2 @@
 #!/bin/sh
-git -C /homeassistant pull
+git -C /homeassistant pull origin master
