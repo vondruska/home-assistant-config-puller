@@ -4,11 +4,11 @@ stages:
 test-scripts:
   stage: test
   image: koalaman/shellcheck
-  script: shellcheck ./scripts/*.sh
+  script: for file in $(find path/to/scripts -type f); do shellcheck --format=gcc $file; done;
   
 test-docker-compose:
   stage: test
-  image: docker/compose
+  image: docker/compose:1.23.0
   
   script:
     - docker-compose config
