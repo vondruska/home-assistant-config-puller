@@ -1,0 +1,14 @@
+stages:
+  - test
+  
+test-scripts:
+  stage: test
+  image: koalaman/shellcheck
+  script: shellcheck ./scripts/*.sh
+  
+test-docker-compose:
+  stage: test
+  image: docker/compose
+  
+  script:
+    - docker-compose config
