@@ -3,8 +3,8 @@ stages:
   
 test-scripts:
   stage: test
-  image: koalaman/shellcheck
-  script: for file in $(find path/to/scripts -type f); do shellcheck --format=gcc $file; done;
+  image: koalaman/shellcheck-alpine
+  script: shellcheck ./scripts/*.sh
   
 test-docker-compose:
   stage: test
