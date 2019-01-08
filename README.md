@@ -1,5 +1,7 @@
 # home-assistant-config-puller
 
+[![pipeline status](https://gitlab.com/vondruska/home-assistant-config-puller/badges/master/pipeline.svg)](https://gitlab.com/vondruska/home-assistant-config-puller/commits/master)
+
 Exposes the ability for GitLab CI/CD to "deploy" the latest Home Assistant configuration. Which really is pulling master at this point. The next phase is to accept the commit hash from the webhook and pull the correct deployed version
 
 Uses the `vondruska/webhook-script-runner` image. 
